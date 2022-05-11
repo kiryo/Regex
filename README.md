@@ -1,7 +1,7 @@
 # Regex
 # Regular Expression
 # 
-# This expression is for scanning finnish socialsecurity numbers.
+# This expression is for scanning finnish social security numbers.
 # Use for this is example in companies that can warn users not to store these numbers in computers or networkdrives.
 # 
 # This expression is different. What makes it special it can find social security numbers between words but excludes match if these is number or letter
