@@ -11,10 +11,13 @@
 
 
 # Expression explaned:
-
-# (^|^a-öA-Ö0-9])        Beginning of line or NOT number or letters. This means that no numbers or letters can be attached in beginning. 
-# [0-9]{6}              6 numbers
+# (^|[^a-öA-Ö0-9-])[0-9]{2}[0-1]{1}[0-9]{3}(-|A)[0-9]{3}([A-Z]|[a-z]|[0-9])([^a-öA-Ö0-9-])
+#
+# (^|[^a-öA-Ö0-9-])     Beginning of line can't contain numbers, letters or line. This means that no numbers or letters can be attached in beginning. 
+# [0-9]{2}              2 numbers
+# [0-1]{1}              1 Number (first number of month can only be 1 or 0)
+# [0-9]{3}              3 Numers, second number of month and 2 numbers of year
 # (-|A)                 Line or A
 # [0-9]{3}              3 numbers
 # ([A-Z]|[a-z]|[0-9])   Letter or number
-# ($|[^a-öA-Ö0-9])      End of line or NOT number or letter. Same as in beginning
+# ($|[^a-öA-Ö0-9-])      Same as in beginning. Can't contain numbers, letters or line
